@@ -1,0 +1,191 @@
+body{
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0 auto;
+}
+
+/* transform */
+
+.transform{
+    width: 400px;
+    height: 200px;
+}
+.outer{
+    background-color: green;
+}
+.inner{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 100px;
+}
+
+.inner:hover{
+    transform: scale(.75);
+    border-radius: 50%;
+    background-color: red;
+    #country{
+        display: none;
+    }
+}
+#country{
+    top: 40px;
+    position: absolute;
+    font-size: 40px;
+}
+ 
+/* Transition */
+.transition{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(10, 165, 212);
+    text-align: center;
+    font-size: 30px;
+    transition: Width 2s ease 1s;
+}
+
+.transition:hover{
+    background-color: rgb(61, 138, 42);
+    width: 400px;
+}
+.transition2{
+    height: 200px;
+    width: 200px;
+    background-color: #5b60af;
+    margin-top: 20px;
+    transition: all 10s linear .2s;
+    text-align: center;
+    font-size: 30px;
+}
+.transition2:hover{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: rgb(179, 22, 108);
+    transform: rotate(360deg);
+}
+
+/* Transition */
+.field{
+    height: 300px;
+    width: 300px;
+}
+.field img{
+    width: 100%;
+    transition: transform .2s ease-in 0s;
+}
+.field img:hover{
+    transform: rotate(-60deg);
+    transform-origin: 100% 0%;
+}
+.base-ball{
+    height: 70px;
+    width: 70px;
+    position: relative;
+    left: 495px;
+    top: -52px;
+    transition: transform .9s ease-in .3s;
+}
+.field:hover .base-ball{
+    transform: translate(1500px, -250px);
+}
+
+/* Animation */
+.animation{
+    border: 1px solid #ddd;
+    min-height: 700px;
+}
+@keyframes slidein {
+    0%{
+        left: 0;
+        top: 0;
+        background-color: #fff;
+    }
+    30%{
+        left: 30%;
+        top: 100px;
+        background-color: blue;
+    }
+    60%{
+        left:60%;
+        top: 0;
+        background: #000;
+    }
+    100%{
+        left: 90%;
+        top: 100px;
+        background: yellow;
+    }
+}
+.ball{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+    position: relative;
+}
+.stage{
+    background-color: lightcyan;
+    height: 200px;
+    min-width: 800px;
+}
+.stage:hover .ball{
+    animation: slidein 2s ease-out .2s infinite alternate none;
+                /* animation: name duration timing-funtion delay interation-count direction full-mode */
+}
+
+/* Grid */
+.grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 3%;
+}
+.box{
+    border: 3px solid green;
+    padding: 10px;
+}
+/* Grid Calender */
+.calender ul{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1.5em;
+    
+
+}
+.calender li{
+    list-style: none;
+    font-size: 40px;
+    height: 125px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.other-month{
+    background-color: lightcoral !important;
+}
+/* Media Query */
+.media{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.food{
+    border: 3px solid blanchedalmond;
+    border-radius: 30px;
+    margin: 10px;
+    width: 350px;
+    padding: 10px;
+}
+.food img{
+    width: 100%;
+}
+@media (max-width: 760px) {
+    .food{
+        background-color: skyblue;
+    }
+    .media{
+        flex-direction: column;
+    }
+}
